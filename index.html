@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мини-Банк Матрёшка РП</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bank-container">
+        <h1>Мини-Банк Матрёшка РП</h1>
+
+        <!-- Форма создания карты -->
+        <div class="card">
+            <h2>Создать карту</h2>
+            <input type="text" id="playerName" placeholder="Ваш никнейм">
+            <button onclick="createCard()">Создать карту</button>
+            <p id="cardInfo"></p>
+        </div>
+
+        <!-- Вклад -->
+        <div class="card">
+            <h2>Положить деньги на карту</h2>
+            <input type="number" id="depositAmount" placeholder="Сумма вклада">
+            <button onclick="deposit()">Внести</button>
+        </div>
+
+        <!-- Перевод -->
+        <div class="card">
+            <h2>Перевести деньги</h2>
+            <input type="text" id="targetCard" placeholder="Номер карты получателя">
+            <input type="number" id="transferAmount" placeholder="Сумма перевода">
+            <button onclick="transfer()">Перевести</button>
+        </div>
+
+        <!-- Баланс и история -->
+        <div class="card">
+            <h2>Баланс и история</h2>
+            <button onclick="showBalance()">Показать баланс</button>
+            <button onclick="showHistory()">История операций</button>
+            <div id="balanceDisplay"></div>
+            <div id="historyDisplay"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
